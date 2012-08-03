@@ -16,12 +16,12 @@
 
 import math
 
-LIMIT = 33
+LIMIT = 28123
 
 def find_divisors(number):
     """ Returns a list of divisors for a number """
-    result = [x for x in range(1, int(math.ceil(math.sqrt(number)))) if number % x == 0]
-    temp = [int(number) / x for x in result if x != 1]
+    result = [int(x) for x in range(1, int(math.ceil(number / 2))) if number % x == 0]
+    temp = [int(number / x) for x in result if x != 1]
     result.extend(temp)
     result = list(set(result))
 
@@ -49,31 +49,23 @@ def get_sums_under_from(in_list, limit):
     for number1 in in_list:
         for number2 in in_list:
             temp = number1 + number2
-            print("%d + %d = %d" % (number1, number2, temp))
+            #print("%d + %d = %d" % (number1, number2, temp))
             # if the sum of the two numbers are over the limit, we don't need to go any further on this number1
             if number2 > number1:
                 break
-            elif temp < limit:
-                print("adding %d" % temp)
+            elif temp <= limit:
+                #print("adding %d" % temp)
                 result.append(temp)
             else:
                 break
 
     return set(result)
 
-def get_not_sum_abundant(in_set, limit):
-    result = 0
-    for number in range(limit + 1):
-        if number not in in_set:
-            result += number
-
-    return result
-
 if __name__ == "__main__":
     abundant = get_abundant_numbers_upto(LIMIT)
     abundant_sums = get_sums_under_from(abundant, LIMIT)
-    not_sum_of_abundant = sum([i for i in range(LIMIT)]) - sum(abundant_sums)
+    not_sum_of_abundant = sum([i for i in range(1, LIMIT + 1)]) - sum(abundant_sums)
     print(not_sum_of_abundant)
-    print(abundant_sums)
-    print(is_abundant(12))
-    print(find_divisors(12))
+    #print(abundant_sums)
+    print(find_divisors(100))
+    
