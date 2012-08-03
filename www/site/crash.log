@@ -1,0 +1,180 @@
+Crashlog created at 2012-07-14 16:11:30 +0200
+
+=== MESSAGE:
+
+LoadError: cannot load such file -- kramdown
+Try installing the 'kramdown' gem (`gem install kramdown`) and then re-running the command.
+
+=== COMPILATION STACK:
+
+  - [item]   / (rep default)
+
+=== BACKTRACE:
+
+  0. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/filters/kramdown.rb:3:in `require'
+  1. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/filters/kramdown.rb:3:in `<top (required)>'
+  2. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/plugin_registry.rb:175:in `const_get'
+  3. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/plugin_registry.rb:175:in `block in resolve'
+  4. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/plugin_registry.rb:174:in `each'
+  5. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/plugin_registry.rb:174:in `inject'
+  6. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/plugin_registry.rb:174:in `resolve'
+  7. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/plugin_registry.rb:117:in `find'
+  8. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/plugin_registry.rb:65:in `named'
+  9. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/result_data/item_rep.rb:486:in `filter_named'
+  10. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/result_data/item_rep.rb:324:in `filter'
+  11. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/compilation/item_rep_proxy.rb:47:in `filter'
+  12. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/compilation/rule_context.rb:54:in `filter'
+  13. ./Rules:37:in `block in load'
+  14. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/compilation/rule.rb:68:in `instance_eval'
+  15. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/compilation/rule.rb:68:in `apply_to'
+  16. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/compilation/compiler.rb:381:in `compile_rep'
+  17. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/compilation/compiler.rb:337:in `block in compile_reps'
+  18. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/compilation/compiler.rb:330:in `loop'
+  19. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/compilation/compiler.rb:330:in `compile_reps'
+  20. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/compilation/compiler.rb:85:in `run'
+  21. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/base/source_data/site.rb:57:in `compile'
+  22. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/cli/commands/compile.rb:57:in `run'
+  23. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  24. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/cli/error_handler.rb:63:in `handle_while'
+  25. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  26. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/cli/command_runner.rb:13:in `call'
+  27. /home/torerling/.gem/ruby/1.9.1/gems/cri-2.3.0/lib/cri/command_dsl.rb:185:in `block in runner'
+  28. /home/torerling/.gem/ruby/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
+  29. /home/torerling/.gem/ruby/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
+  30. /home/torerling/.gem/ruby/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
+  31. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/cli/commands/nanoc.rb:39:in `block in define'
+  32. /home/torerling/.gem/ruby/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
+  33. /home/torerling/.gem/ruby/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
+  34. /home/torerling/.gem/ruby/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
+  35. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/cli.rb:47:in `block in run'
+  36. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/cli/error_handler.rb:63:in `handle_while'
+  37. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  38. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib/nanoc/cli.rb:44:in `run'
+  39. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/bin/nanoc:19:in `<top (required)>'
+  40. /home/torerling/.gem/ruby/1.9.1/bin/nanoc:23:in `load'
+  41. /home/torerling/.gem/ruby/1.9.1/bin/nanoc:23:in `<main>'
+
+=== VERSION INFORMATION:
+
+nanoc 3.4.0 © 2007-2012 Denis Defreyne.
+Running ruby 1.9.3 (2012-04-20) on x86_64-linux with RubyGems 1.8.23.
+
+=== INSTALLED GEMS:
+
+  adsf 1.1.1
+  bundler 1.1.4
+  colored 1.2
+  commonjs 0.2.6
+  cri 2.3.0
+  less 2.2.1
+  mime-types 1.19
+  nanoc 3.4.0
+  rack 1.4.1
+  rainpress 1.0
+
+=== ENVIRONMENT:
+
+BUNDLE_BIN_PATH => "/usr/lib/ruby/gems/1.9.1/gems/bundler-1.1.4/bin/bundle"
+BUNDLE_GEMFILE => "/home/torerling/programming/www/site/Gemfile"
+CLOJURE_HOME => "/usr/share/clojure"
+DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-gNB0ZDsufQ,guid=a6e742c73aae62b276ce033550015f6a"
+DISPLAY => ":0"
+GEM_HOME => "/usr/lib/ruby/gems/1.9.1"
+GEM_PATH => "/usr/lib/ruby/gems/1.9.1:/home/torerling/.gem/ruby/1.9.1"
+GOPATH => "/usr/lib/go/site"
+GREP_COLOR => "1;32"
+GREP_OPTIONS => "--color=auto"
+GTK_MODULES => "canberra-gtk-module"
+G_BROKEN_FILENAMES => "1"
+HG => "/usr/bin/hg"
+HOME => "/home/torerling"
+J2REDIR => "/usr/lib/jvm/java-7-openjdk/jre"
+J2SDKDIR => "/usr/lib/jvm/java-7-openjdk"
+JAVA_HOME => "/usr/lib/jvm/java-7-openjdk"
+LANG => "C"
+LC_CTYPE => "C"
+LESS_TERMCAP_mb => "\e[01;31m"
+LESS_TERMCAP_md => "\e[01;31m"
+LESS_TERMCAP_me => "\e[0m"
+LESS_TERMCAP_se => "\e[0m"
+LESS_TERMCAP_so => "\e[01;49;1m"
+LESS_TERMCAP_ue => "\e[0m"
+LESS_TERMCAP_us => "\e[01;32m"
+LOGNAME => "torerling"
+LSCOLORS => "Gxfxcxdxbxegedabagacad"
+MAIL => "/var/spool/mail/torerling"
+MOZ_PLUGIN_PATH => "/usr/lib/mozilla/plugins"
+MUSCA => "musca"
+OLDPWD => "/home/torerling/.gem/ruby/1.9.1/bin"
+PAGER => "/usr/bin/less"
+PATH => "/usr/lib/ruby/gems/1.9.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/torerling/.gem/ruby/1.9.1/bin:/usr/bin/core_perl"
+PWD => "/home/torerling/programming/www/site"
+ROXTERM_ID => "0x27c1220"
+ROXTERM_NUM => "1"
+ROXTERM_PID => "1853"
+RUBYOPT => "-I/usr/lib/ruby/gems/1.9.1/gems/bundler-1.1.4/lib -rbundler/setup"
+SHELL => "/bin/zsh"
+SHLVL => "4"
+TERM => "xterm"
+USER => "torerling"
+WINDOWID => "23068690"
+WINDOWPATH => "7"
+XAUTHORITY => "/home/torerling/.Xauthority"
+XDG_CACHE_HOME => "/home/torerling/.cache"
+XDG_CONFIG_DIRS => "/etc/xdg"
+XDG_CONFIG_HOME => "/home/torerling/.config"
+XDG_DATA_DIRS => "/usr/local/share/:/usr/share/"
+XDG_DATA_HOME => "/home/torerling/.local/share"
+XDG_SESSION_COOKIE => "8b57af6242aa3d5210fe0e9200000f54-1342267242.458958-142593011"
+_ => "/home/torerling/.gem/ruby/1.9.1/bin/nanoc"
+
+=== GEMFILE.LOCK:
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    adsf (1.1.1)
+      rack (>= 1.0.0)
+    colored (1.2)
+    commonjs (0.2.6)
+    cri (2.3.0)
+      colored (>= 1.2)
+    less (2.2.1)
+      commonjs (~> 0.2.6)
+    mime-types (1.19)
+    nanoc (3.4.0)
+      cri (~> 2.2)
+    rack (1.4.1)
+    rainpress (1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  adsf
+  less
+  mime-types
+  nanoc
+  rainpress
+
+=== $LOAD_PATH:
+
+  0. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib
+  1. /usr/lib/ruby/gems/1.9.1/gems/rainpress-1.0/lib
+  2. /home/torerling/.gem/ruby/1.9.1/gems/nanoc-3.4.0/lib
+  3. /usr/lib/ruby/gems/1.9.1/gems/mime-types-1.19/lib
+  4. /usr/lib/ruby/gems/1.9.1/gems/less-2.2.1/lib
+  5. /home/torerling/.gem/ruby/1.9.1/gems/cri-2.3.0/lib
+  6. /usr/lib/ruby/gems/1.9.1/gems/commonjs-0.2.6/lib
+  7. /home/torerling/.gem/ruby/1.9.1/gems/colored-1.2/lib
+  8. /home/torerling/.gem/ruby/1.9.1/gems/adsf-1.1.1/lib
+  9. /usr/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib
+  10. /usr/lib/ruby/gems/1.9.1/gems/bundler-1.1.4/lib
+  11. /usr/lib/ruby/site_ruby/1.9.1
+  12. /usr/lib/ruby/site_ruby/1.9.1/x86_64-linux
+  13. /usr/lib/ruby/site_ruby
+  14. /usr/lib/ruby/vendor_ruby/1.9.1
+  15. /usr/lib/ruby/vendor_ruby/1.9.1/x86_64-linux
+  16. /usr/lib/ruby/vendor_ruby
+  17. /usr/lib/ruby/1.9.1
+  18. /usr/lib/ruby/1.9.1/x86_64-linux

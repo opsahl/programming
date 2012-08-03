@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+
+compile '/assets/less/*' do
+  # Note:  built-in less filter not working properly
+  #        using commandline filter instead
+  filter :bootstrap if @item.identifier.gsub('/assets/less/','').chop == 'bootstrap'
+end
+
+compile '/assets/css/*' do
+  filter :rainpress
+end
+
+compile '/assets/js/*/' do
+   # minify JS :)
+   if $use_minified_js then
+     filter :shellcmd, "java -jar js/js-compiler.jar"
+   end
+end
+
+compile '/assets/*/' do
+  # don't compile
+end
+
+route '/assets/css/*/' do
+  @item.identifier.chop + '.' + @item[:extension]
+end
+
+route '/assets/js/*/' do
+  @item.identifier.chop + '.' + @item[:extension]
+end
+
+route '/assets/less/*/' do
+  # don't copy over
+end
+
+compile '/' do
+    filter :kramdown
+    layout 'default'
+end
+
+compile '*' do
+  if not item.binary?
+    filter :erb
+    layout 'default'
+  end
+end
+
+route '*' do
+  if item.binary?
+  	  item.identifier.chop + '.' + item[:extension]
+  else
+  	  @item.identifier + 'index.html'
+  end
+end
+
+layout '*', :erb
